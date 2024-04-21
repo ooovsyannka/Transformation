@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float _speedMove;
     [SerializeField] private float _distance;
 
-    void Update()
+    private void Update()
     {
         Move();
     }

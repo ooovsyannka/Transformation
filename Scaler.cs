@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Scaler : MonoBehaviour
 {
@@ -9,13 +7,11 @@ public class Scaler : MonoBehaviour
 
     private void Update()
     {
-        Resiz();
+        Resize();
     }
 
-    private void Resiz()
+    private void Resize()
     {
-        float resizValue = Mathf.PingPong( _speedResiz*Time.time, _scaleValue);
-
-        transform.localScale = Vector3.one * resizValue;
+        transform.localScale += Vector3.one * _speedResiz * _scaleValue * Time.deltaTime ;
     }
 }
